@@ -4,7 +4,20 @@
 	<div class="row">
 		{% for product in products %}
 		<div class="col-lg-4">
-			<img class="thumbnail" src="{% static 'images/book.jpg' %}">
+			{% if product.name == "Headphones" %}
+				<img class="thumbnail" src="{% static 'images/headphones.jpg' %}">
+			{% elif product.name == "Mount of Olives Book" %}
+				<img class="thumbnail" src="{% static 'images/book.jpg' %}">
+			{% elif product.name == "Project Source Code" %}
+				<img class="thumbnail" src="{% static 'images/sourcecode.jpg' %}">
+			{% elif product.name == "Watch" %}
+				<img class="thumbnail" src="{% static 'images/watch.jpg' %}">
+			{% elif product.name == "Shoes" %}
+				<img class="thumbnail" src="{% static 'images/shoes.jpg' %}">
+			{% elif product.name == "T-Shirt" %}
+				<img class="thumbnail" src="{% static 'images/shirt.jpg' %}">
+
+			{% endif %}
 			<div class="box-element product">
 				<h6><strong>{{product.name}}</strong></h6>
 				<hr>
